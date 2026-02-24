@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Vídeo - Oleguer Esteo</title>
+    <link href="https://vjs.zencdn.net/8.6.1/video-js.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+        }
+        .video-container {
+            margin: 30px 0;
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .video-js {
+            width: 100%;
+            height: 500px;
+        }
+        .info {
+            background: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .stream-url {
+            background: #444;
+            padding: 10px;
+            border-radius: 3px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎥 Streaming de Vídeo - Oleguer Esteo</h1>
+
+    <div class="video-container">
+        <video id="live-stream" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto"></video>
+    </div>
+
+    <div class="info">
+        <h2>Informació del Stream</h2>
+        <p><strong>Stream key:</strong> <code>stream-olegueresteo</code></p>
+        <p><strong>URL RTMP per OBS/ffmpeg:</strong></p>
+        <div class="stream-url">
+            rtmp://localhost:1935/stream/stream-olegueresteo
+        </div>
+        <p><strong>URL HLS per reproduir:</strong></p>
+        <div class="stream-url">
+            http://localhost:8080/hls/stream-olegueresteo.m3u8
+        </div>
+        <p><strong>Estadístiques del servidor:</strong> <a href="http://localhost:8080/stat" target="_blank">Veure estadístiques</a></p>
+    </div>
+
+    <script src="https://vjs.zencdn.net/8.6.1/video.min.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-quality-levels@4.1.0/dist/videojs-contrib-quality-levels.min.js"></script>
+    <script src="https://unpkg.com/videojs-hls-quality-selector@2.0.0/dist/videojs-hls-quality-selector.min.js"></script>
+
+    <script>
+        var player = videojs('live-stream', {
+            liveui: true,
+            fluid: true,
+            html5: {
+                vhs: { overrideNative: true }
+            }
+        });
+
+        // Carreguem l'URL que veiem que et funciona al terminal
+        player.src({
+            src: 'http://localhost:8080/hls/stream-olegueresteo.m3u8',
+            type: 'application/x-mpegURL'
+        });
+
+        player.ready(function() {
+            // Habilitem el selector de qualitat
+            player.hlsQualitySelector({
+                displayCurrentQuality: true,
+            });
+        });
+    </script>
+</body>
+</html>

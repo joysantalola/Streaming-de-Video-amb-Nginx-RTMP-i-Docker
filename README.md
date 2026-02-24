@@ -47,7 +47,7 @@ Per començar a emetre, configura el teu codificador (OBS Studio) amb els següe
 | Ajust | Valor |
 | --- | --- |
 | **Tipus d'emissió** | Servidor personalitzat |
-| **URL del servidor** | `rtmp://localhost:1935/stream` |
+| **URL del servidor** | `rtmp://IP:1935/stream` |
 | **Clau de transmissió** | `stream-olegueresteo` |
 
 ---

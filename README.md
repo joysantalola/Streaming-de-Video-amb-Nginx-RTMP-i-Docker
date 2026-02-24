@@ -8,18 +8,6 @@
 
 Aquest repositori conté la configuració necessària per desplegar un servidor de streaming de vídeo que rep un senyal via **RTMP**, realitza **transcoding** en temps real i el serveix mitjançant **HLS** (HTTP Live Streaming) amb suport per a múltiples qualitats (adaptatiu).
 
----
-
-## 📖 Taula de Continguts
-- [Arquitectura del Sistema](#-arquitectura-del-sistema)
-- [Requisits](#-requisits)
-- [Instal·lació i Desplegament](#-instal·lació-i-desplegament)
-- [Configuració de l'Emissió (OBS)](#-configuració-de-lemissió-obs)
-- [Verificació i Estadístiques](#-verificació-i-estadístiques)
-- [Estructura del Projecte](#-estructura-del-projecte)
-
----
-
 ## 🏗️ Arquitectura del Sistema
 
 El flux de dades segueix el següent esquema:
@@ -46,7 +34,7 @@ El flux de dades segueix el següent esquema:
    git clone [https://github.com/el-teu-usuari/nom-del-repo.git](https://github.com/el-teu-usuari/nom-del-repo.git)
    cd nom-del-repo
 
-```
+
 
 2. **Aixeca els contenidors:**
 ```bash

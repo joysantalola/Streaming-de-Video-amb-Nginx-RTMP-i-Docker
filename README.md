@@ -8,18 +8,9 @@
 
 Aquest repositori conté la configuració necessària per desplegar un servidor de streaming de vídeo que rep un senyal via **RTMP**, realitza **transcoding** en temps real i el serveix mitjançant **HLS** (HTTP Live Streaming) amb suport per a múltiples qualitats (adaptatiu).
 
-## 🏗️ Arquitectura del Sistema
-
-El flux de dades segueix el següent esquema:
-1. **Origen (OBS):** Envia vídeo H.264 via RTMP.
-2. **Servidor (Nginx):** Rep el flux i utilitza FFmpeg per crear variants (720p, 480p, 360p).
-3. **Destí (Navegador):** L'usuari consumeix el contingut mitjançant HLS amb Video.js.
-
-
-
 ---
 
-## 💻 Requisits
+## Requisits
 
 - [Docker](https://www.docker.com/) i Docker Compose.
 - [OBS Studio](https://obsproject.com/) per a la transmissió del senyal.
@@ -27,19 +18,18 @@ El flux de dades segueix el següent esquema:
 
 ---
 
-## 🚀 Instal·lació i Desplegament
+## Instal·lació i Desplegament
 
 1. **Clona el repositori:**
-   ```bash
-   git clone [https://github.com/joysantalola/Streaming-de-Video-amb-Nginx-RTMP-i-Docker)
-   cd Streaming-de-Video-amb-Nginx-RTMP-i-Docker
-   ```
+```bash
+ git clone [https://github.com/joysantalola/Streaming-de-Video-amb-Nginx-RTMP-i-Docker)
+ cd Streaming-de-Video-amb-Nginx-RTMP-i-Docker
+```
 
 
 2. **Aixeca els contenidors:**
 ```bash
 docker-compose up -d
-
 ```
 
 
@@ -47,12 +37,9 @@ docker-compose up -d
 ```bash
 docker ps
 ```
-
-
-
 ---
 
-## 📹 Configuració de l'Emissió (OBS)
+## Configuració de l'Emissió (OBS)
 
 Per començar a emetre, configura el teu codificador (OBS Studio) amb els següents paràmetres:
 
@@ -64,7 +51,7 @@ Per començar a emetre, configura el teu codificador (OBS Studio) amb els següe
 
 ---
 
-## 📊 Verificació i Estadístiques
+## Verificació i Estadístiques
 
 ### Reproducció Web
 
@@ -73,7 +60,7 @@ Pots accedir al reproductor a `http://localhost:8080`. El sistema detecta autom�
 ### Panell de Control
 
 Monitoritza el bitrate i els usuaris connectats en temps real:
-👉 [http://localhost:8080/stat](https://www.google.com/search?q=http://localhost:8080/stat)
+--> [http://localhost:8080/stat](https://www.google.com/search?q=http://localhost:8080/stat)
 
 ### Comprovació de fitxers HLS
 
@@ -86,7 +73,7 @@ docker exec streaming-video-olegueresteo ls -lh /opt/data/hls/
 
 ---
 
-## 📂 Estructura del Projecte
+## Estructura del Projecte
 
 ```bash
 .
@@ -97,11 +84,5 @@ docker exec streaming-video-olegueresteo ls -lh /opt/data/hls/
 │   └── stat.xsl         # Full d'estils per a les estadístiques
 ├── hls/                 # Fitxers de vídeo generats (ignorat per git)
 └── img/                 # Captures de pantalla de la documentació
-
-```
-
-
-
-T'agradaria que t'ajudés a omplir les **Qüestions** de la pràctica (bitrates, càlculs, etc.) amb aquest mateix format de taules per afegir-ho al final?
 
 ```

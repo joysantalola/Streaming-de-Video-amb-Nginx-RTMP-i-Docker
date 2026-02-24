@@ -22,7 +22,7 @@ Aquest repositori conté la configuració necessària per desplegar un servidor 
 
 1. **Clona el repositori:**
 ```bash
- git clone [https://github.com/joysantalola/Streaming-de-Video-amb-Nginx-RTMP-i-Docker)
+ git clone [https://github.com/joysantalola/Streaming-de-Video-amb-Nginx-RTMP-i-Docker]
  cd Streaming-de-Video-amb-Nginx-RTMP-i-Docker
 ```
 
@@ -63,7 +63,7 @@ Pots accedir al reproductor a `http://localhost:8080`. El sistema detecta autom�
 ### Panell de Control
 
 Monitoritza el bitrate i els usuaris connectats en temps real:
---> [http://localhost:8080/stat](https://www.google.com/search?q=http://localhost:8080/stat)
+--> [http://localhost:8080/stat](http://localhost:8080/stat)
 
 ![Stat](img/stats.png)
 ### Comprovació de fitxers HLS

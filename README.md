@@ -31,9 +31,9 @@ El flux de dades segueix el següent esquema:
 
 1. **Clona el repositori:**
    ```bash
-   git clone [https://github.com/el-teu-usuari/nom-del-repo.git](https://github.com/el-teu-usuari/nom-del-repo.git)
-   cd nom-del-repo
-
+   git clone [https://github.com/joysantalola/Streaming-de-Video-amb-Nginx-RTMP-i-Docker)
+   cd Streaming-de-Video-amb-Nginx-RTMP-i-Docker
+   ```
 
 
 2. **Aixeca els contenidors:**
@@ -46,7 +46,6 @@ docker-compose up -d
 3. **Verifica l'estat dels serveis:**
 ```bash
 docker ps
-
 ```
 
 

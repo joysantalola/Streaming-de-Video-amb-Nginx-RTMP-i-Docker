@@ -38,6 +38,7 @@ docker-compose up -d
 docker ps
 ```
 ---
+![Docker PS](img/ps.png)
 
 ## Configuració de l'Emissió (OBS)
 
@@ -50,6 +51,7 @@ Per començar a emetre, configura el teu codificador (OBS Studio) amb els següe
 | **Clau de transmissió** | `stream-olegueresteo` |
 
 ---
+![Configuració OBS](img/obsconf.png)
 
 ## Verificació i Estadístiques
 
@@ -57,11 +59,13 @@ Per començar a emetre, configura el teu codificador (OBS Studio) amb els següe
 
 Pots accedir al reproductor a `http://localhost:8080`. El sistema detecta automàticament les variants de qualitat:
 
+![Reproductor Web](img/web.png)
 ### Panell de Control
 
 Monitoritza el bitrate i els usuaris connectats en temps real:
 --> [http://localhost:8080/stat](https://www.google.com/search?q=http://localhost:8080/stat)
 
+![Stat](img/stats.png)
 ### Comprovació de fitxers HLS
 
 Si vols verificar que el servidor està generant els segments de vídeo correctament:
@@ -72,6 +76,7 @@ docker exec streaming-video-olegueresteo ls -lh /opt/data/hls/
 ```
 
 ---
+![Verificació](img/vids.png)
 
 ## Estructura del Projecte
 
